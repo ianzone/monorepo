@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "nx run-many --target=build --all",
+    "build:all": "nx run-many --target=build --all",
+    "build:affected": "nx affected:build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -15,9 +16,5 @@
     "nx": "16.5.2",
     "prettier": "^3.0.0",
     "typescript": "^5.1.6"
-  },
-  "dependencies": {
-    "is-even": "^1.0.0",
-    "is-odd": "^3.0.1"
   }
 }

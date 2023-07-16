@@ -39,7 +39,13 @@ nx build <package>
 ### Build all packages
 
 ```bash
-nr build
+nr build:all
+```
+
+### Build affected packages
+
+```bash
+nr build:affected
 ```
 
 # Reference
@@ -51,12 +57,18 @@ nr build
 # nx.json
 
 ```json
+{
+  "namedInputs": {
+    // exclude markdown files from caching
+    "noMarkdown": ["!{projectRoot}/**/*.md"]
+  },
   "targetDefaults": {
     "build": {
-      "dependsOn": [
-        // when build a package, build all packages that it's depended on
-        "^build"
-      ]
+      // exclude markdown files from caching for the package and its dependencies
+      "inputs": ["noMarkdown", "^noMarkdown"],
+      // when build a package, build all packages that it's depended on
+      "dependsOn": ["^build"]
     }
   }
+}
 ```
