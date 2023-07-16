@@ -1,0 +1,23 @@
+{
+  "name": "mono-ts-osc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "nx run-many --target=build --all",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.45.0",
+    "nx": "16.5.2",
+    "prettier": "^3.0.0",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "is-even": "^1.0.0",
+    "is-odd": "^3.0.1"
+  }
+}
