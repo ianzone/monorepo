@@ -1,6 +1,8 @@
-# Install
+# Commands
 
-### install dependencies
+## Install
+
+### install global dependencies
 
 ```bash
 pnpm install -g @antfu/ni nx
@@ -14,13 +16,19 @@ ni -w <dependencies>
 ni -w -D <devDependencies>
 ```
 
+### remove dependencies
+
+```bash
+nun -w <dependencies>
+```
+
 ### add local packages
 
 ```bash
 ni --workspace <packages> --filter <target>
 ```
 
-# Create a new package
+## Create a new package
 
 ```bash
 mkdir <packageDir>
@@ -28,7 +36,7 @@ cd <packageDir>
 pnpm init
 ```
 
-# Build
+## Build
 
 ### Build one package
 
@@ -47,6 +55,10 @@ nr build:all
 ```bash
 nr build:affected
 ```
+
+## Test
+
+## Publish
 
 # Reference
 
