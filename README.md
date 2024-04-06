@@ -1,60 +1,35 @@
 # Commands
 
-## Install
-
-### install global dependencies
+## Getting started
 
 ```bash
 pnpm install -g @antfu/ni nx
 ni
 ```
 
-### add dependencies
+## Package management
 
 ```bash
-ni -w <dependencies>
-ni -w -D <devDependencies>
-```
-
-### remove dependencies
-
-```bash
-nun -w <dependencies>
-```
-
-### add local packages
-
-```bash
-ni --workspace <packages> --filter <target>
-```
-
-## Create a new package
-
-```bash
-mkdir <packageDir>
-cd <packageDir>
+# Create a package
+mkdir <pkgDir>
+cd <pkgDir>
 pnpm init
 ```
 
+| Management        | Root            | Local                             |
+| ----------------- | --------------- | --------------------------------- |
+| Add from registry | `ni -w <deps>`  | `ni <deps> -F <pkg>`              |
+| Add from local    | null            | `ni --workspace <deps> -F <pkg>`  |
+| Update            | `nu`            | `nu -F <pkg>`                     |
+| Remove            | `nun -w <deps>` | `nun --workspace <deps> -F <pkg>` |
+
 ## Build
 
-### Build one package
-
-```bash
-nx build <package>
-```
-
-### Build all packages
-
-```bash
-nr build:all
-```
-
-### Build affected packages
-
-```bash
-nr build:affected
-```
+| Build    | command             |
+| -------- | ------------------- |
+| one      | `nx build <pkg>`    |
+| all      | `nr build:all`      |
+| affected | `nr build:affected` |
 
 ## Test
 
