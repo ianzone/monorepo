@@ -16,10 +16,10 @@ cd <pkgDir>
 pnpm init
 ```
 
-| Management        | Root            | Local                             |
+| Management        | Root            | Local package                     |
 | ----------------- | --------------- | --------------------------------- |
 | Add from registry | `ni -w <deps>`  | `ni <deps> -F <pkg>`              |
-| Add from local    | null            | `ni --workspace <deps> -F <pkg>`  |
+| Add from local    |                 | `ni --workspace <deps> -F <pkg>`  |
 | Update            | `nu`            | `nu -F <pkg>`                     |
 | Remove            | `nun -w <deps>` | `nun --workspace <deps> -F <pkg>` |
 
