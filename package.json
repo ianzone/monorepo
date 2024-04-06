@@ -1,11 +1,14 @@
 {
   "scripts": {
-    "build:all": "nx run-many --target=build --all",
+    "build:all": "nx run-many --targets=build --parallel $(nproc)",
     "build:affected": "nx affected:build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "lefthook install",
+    "commit": "git add . && git-cz"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.6.4",
+    "git-cz": "^4.9.0",
+    "lefthook": "^1.6.8",
     "nx": "^18.2.3",
     "typescript": "^5.4.4"
   }
