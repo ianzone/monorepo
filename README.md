@@ -21,6 +21,7 @@ pnpm init
 | Add from registry | `ni -w <deps>`  | `ni <deps> -F <pkg>`              |
 | Add from local    |                 | `ni --workspace <deps> -F <pkg>`  |
 | Update            | `nu`            | `nu -F <pkg>`                     |
+| Update All        | `nu -r`         | `nu -F <pkg> -r`                  |
 | Remove            | `nun -w <deps>` | `nun --workspace <deps> -F <pkg>` |
 
 ## Build

@@ -3,13 +3,13 @@
     "build:all": "nx run-many --targets=build --parallel $(nproc)",
     "build:affected": "nx affected:build",
     "postinstall": "lefthook install",
-    "commit": "git add . && git-cz"
+    "commit": "git add -A && git-cz"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.6.4",
+    "@biomejs/biome": "^1.7.0",
     "git-cz": "^4.9.0",
-    "lefthook": "^1.6.8",
-    "nx": "^18.2.3",
-    "typescript": "^5.4.4"
+    "lefthook": "^1.6.10",
+    "nx": "^18.3.3",
+    "typescript": "^5.4.5"
   }
 }
