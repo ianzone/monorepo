@@ -1,1 +1,2 @@
-a react native app
+原生：RN
+小程序：taro
